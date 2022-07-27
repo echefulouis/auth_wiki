@@ -6,6 +6,7 @@ from django.shortcuts import render,redirect
 from . models import *
 from . forms import CommentForm
 from django.http import HttpResponse
+
 # from account import forms
 
 # Create your views here.
@@ -41,4 +42,7 @@ def download(request,path):
             response = HttpResponse(mimetype='application/adminupload')
             response['Content-Disposition']='inline;filename'+os.path.basename(file_path)
             return response
-    raise Http404("File not found")
+    raise HttpResponse("File not found")
+
+
+
