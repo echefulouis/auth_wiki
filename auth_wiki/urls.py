@@ -18,5 +18,10 @@ from django.urls import path ,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/',include('account.urls'))
+    path('account/',include('account.urls')),
+    #path('library/',include('library.urls')),
+    #path("login/", views.loginpage, name='login'),
+    #path('logout', views.userlogout, name='logout'),
+    #path('edit_entry/cint:entry_id>/', views.edit_entry, name='edit_entry'),
+
 ]
